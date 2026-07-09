@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link rel="icon" href="Settings/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="hero hero--short" id="top">
+  <img class="hero__img" src="Settings/Cover.jpg" alt="Cover" />
+  <div class="hero__content">
+    <h1 class="hero__title">About Us</h1>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about__inner" id="aboutContent"></div>
+</section>
+
+<script src="site-common.js"></script>
+<script>
+  const iconMap = {
+    'Embark': 'Settings/About/Icons/Embark.webp',
+    'OFA':    'Settings/About/Icons/OFA.webp',
+    'AKC':    'Settings/About/Icons/AKC.avif',
+    'BBB':    'Settings/About/Icons/BBB.png'
+  };
+
+  function parseAbout(text) {
+    const sections = [];
+    let sec = null, card = null;
+    for (const line of text.split('\n')) {
+      const t = line.trim();
+      if (!t || t.startsWith('#') || t.startsWith('---')) continue;
+      if (t.toLowerCase().startsWith('section:')) { sec = { dog: t.substring(8).trim(), cards: [] }; sections.push(sec); card = null; }
+      else if (t.startsWith('ORG:') && sec) { card = { org: t.substring(4).trim(), label: '', link: '' }; sec.cards.push(card); }
+      else if (t.startsWith('LABEL:') && card) card.label = t.substring(6).trim();
+      else if (t.startsWith('LINK:') && card) card.link = t.substring(5).trim();
+    }
+    return sections;
+  }
+
+  function renderAbout(sections) {
+    const c = document.getElementById('aboutContent');
+    const frag = document.createDocumentFragment();
+    for (const sec of sections) {
+      const div = document.createElement('div'); div.className = 'about__section';
+      const h = document.createElement('h2'); h.className = 'about__section-title'; h.textContent = sec.dog;
+      div.appendChild(h);
+      const grid = document.createElement('div'); grid.className = 'about__grid';
+      for (const item of sec.cards) {
+        const card = document.createElement('div'); card.className = 'about__card';
+        const icon = document.createElement('img'); icon.className = 'about__icon';
+        icon.src = iconMap[item.org] || ''; icon.alt = item.org; icon.loading = 'lazy'; icon.decoding = 'async';
+        const btn = document.createElement('a'); btn.className = 'btn btn--secondary about__btn';
+        btn.target = '_blank'; btn.rel = 'noopener noreferrer'; btn.href = item.link; btn.textContent = item.label;
+        card.appendChild(icon); card.appendChild(btn); grid.appendChild(card);
+      }
+      div.appendChild(grid); frag.appendChild(div);
+    }
+    c.textContent = '';
+    c.appendChild(frag);
+  }
+
+  fetch('Settings/About/content.txt')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(t => renderAbout(parseAbout(t)))
+    .catch(() => {
+      document.getElementById('aboutContent').innerHTML =
+        '<p class="about__fallback">To view About records, please open this page through a local web server ' +
+        '(e.g. run <strong>python3 -m http.server</strong> in this folder and visit ' +
+        '<strong>localhost:8000/about.html</strong>).</p>';
+    })
+    .finally(() => pageReady());
+</script>
+
+</body>
+</html>

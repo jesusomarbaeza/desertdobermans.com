@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Litters</title>
+  <link rel="icon" href="Settings/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="hero hero--short" id="top">
+  <img class="hero__img" src="Settings/Cover.jpg" alt="Cover" />
+  <div class="hero__content">
+    <h1 class="hero__title">Our Litters</h1>
+  </div>
+</section>
+
+<section class="litters" id="litters">
+  <div class="litters__inner" id="littersContent"></div>
+</section>
+
+<script src="site-common.js"></script>
+<script>
+  function parseLitters(text) {
+    const litters = [];
+    let cur = null;
+    for (const line of text.split('\n')) {
+      const t = line.trim();
+      if (!t || t.charCodeAt(0) === 35 || t.startsWith('===')) continue;
+      if (t.startsWith('LITTER:')) { cur = { title: t.substring(7).trim(), folder: '' }; litters.push(cur); }
+      else if (t.startsWith('FOLDER:') && cur) cur.folder = t.substring(7).trim();
+    }
+    return litters;
+  }
+
+  async function loadImageManifest() {
+    const r = await fetch('Settings/Litters/images.json');
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }
+
+  async function renderLitters(litters, imageManifest) {
+    const c = document.getElementById('littersContent');
+    const frag = document.createDocumentFragment();
+
+    for (let li = 0; li < litters.length; li++) {
+      const lit = litters[li];
+      const imgs = (imageManifest[lit.folder] || []).map(name =>
+        'Settings/Litters/' + lit.folder + '/' + encodeURIComponent(name)
+      );
+      const sec = document.createElement('div'); sec.className = 'litter';
+      const h = document.createElement('h2'); h.className = 'litter__title'; h.textContent = lit.title;
+      sec.appendChild(h);
+      if (!imgs.length) {
+        const p = document.createElement('p'); p.className = 'litter__empty';
+        p.textContent = 'No puppy photos yet \u2014 check back soon!';
+        sec.appendChild(p);
+      } else {
+        const grid = document.createElement('div'); grid.className = 'litter__grid';
+        for (let i = 0; i < imgs.length; i++) {
+          const w = document.createElement('div'); w.className = 'litter__circle';
+          const img = document.createElement('img');
+          img.src = imgs[i]; img.alt = lit.title + ' puppy ' + (i + 1);
+          img.loading = 'lazy'; img.decoding = 'async';
+          w.appendChild(img); grid.appendChild(w);
+        }
+        sec.appendChild(grid);
+      }
+      frag.appendChild(sec);
+    }
+    c.textContent = '';
+    c.appendChild(frag);
+  }
+
+  Promise.all([
+    fetch('Settings/Litters/litters.txt')
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }),
+    loadImageManifest()
+  ])
+    .then(([litterText, imageManifest]) => renderLitters(parseLitters(litterText), imageManifest))
+    .catch(() => {
+      document.getElementById('littersContent').innerHTML =
+        '<p class="litter__fallback">We couldn\'t load litter photos right now. Please verify ' +
+        '<strong>Settings/Litters/images.json</strong> is present in the published site.</p>';
+    })
+    .finally(() => pageReady());
+</script>
+
+</body>
+</html>

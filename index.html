@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="icon" href="Settings/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="hero" id="home">
+  <img class="hero__img" src="Settings/Cover.jpg" alt="Cover" />
+  <div class="hero__content">
+    <h1 class="hero__title" id="heroTitle">Reserve For A Future Litter Now</h1>
+    <a href="reserve.html" class="btn" id="heroBtn">Reserve</a>
+  </div>
+</section>
+
+<section class="info" id="about">
+  <div class="info__inner">
+    <h2 class="info__heading" id="infoHeading">Quality-bred family companions</h2>
+    <p class="info__text" id="infoText">
+      We believe every home deserves the joy of a quality-bred family companion.
+      Our focus is on the health, happiness, and social well-being of our puppies from day one.
+      By prioritizing thoughtful breeding and sound character, we produce exceptional dogs that
+      are prepared to be cherished members of your family for years to come.
+    </p>
+    <a href="about.html" class="btn btn--secondary" id="infoBtn">View Pedigree</a>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="gallery__item"><img src="Settings/Home/Gallery/1.jpeg" alt="Dog 1" loading="lazy" decoding="async" /></div>
+  <div class="gallery__item"><img src="Settings/Home/Gallery/2.jpeg" alt="Dog 2" loading="lazy" decoding="async" /></div>
+  <div class="gallery__item"><img src="Settings/Home/Gallery/3.jpeg" alt="Dog 3" loading="lazy" decoding="async" /></div>
+</section>
+
+<script src="site-common.js"></script>
+<script>
+  fetchSettings('Settings/Home/content.txt').then(d => {
+    if (d['HERO TITLE'])       document.getElementById('heroTitle').textContent = d['HERO TITLE'];
+    if (d['HERO BUTTON TEXT']) document.getElementById('heroBtn').textContent   = d['HERO BUTTON TEXT'];
+    if (d['INFO HEADING'])     document.getElementById('infoHeading').textContent = d['INFO HEADING'];
+    if (d['INFO TEXT'])        document.getElementById('infoText').textContent    = d['INFO TEXT'];
+    if (d['INFO BUTTON TEXT']) document.getElementById('infoBtn').textContent     = d['INFO BUTTON TEXT'];
+  }).catch(() => {}).finally(() => pageReady());
+</script>
+
+</body>
+</html>

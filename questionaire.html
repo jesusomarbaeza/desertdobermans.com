@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questionnaire</title>
+  <link rel="icon" href="Settings/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="hero hero--short" id="top">
+  <img class="hero__img" src="Settings/Cover.jpg" alt="Cover" />
+  <div class="hero__content">
+    <h1 class="hero__title" id="heroTitle">Puppy Adoption Questionnaire</h1>
+  </div>
+</section>
+
+<section class="reserve" id="questionnaire">
+  <div class="reserve__inner">
+    <p class="questionnaire__intro" id="qIntro">
+      This questionnaire is designed to help you prepare for the exciting journey of welcoming a Doberman puppy into your life.
+    </p>
+    <form class="reserve__form" id="questionnaireForm" action="https://formsubmit.co/contact@desertdobermans.com" method="POST">
+      <input type="hidden" name="_subject" value="New Questionnaire Response — Desert Dobermans" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" style="display:none" />
+      <div class="form__group">
+        <label class="form__label" for="fullName">First &amp; Last Name *</label>
+        <input class="form__input" type="text" id="fullName" name="name" required autocomplete="name" />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="email">Email *</label>
+        <input class="form__input" type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="phone">Phone *</label>
+        <input class="form__input" type="tel" id="phone" name="phone" required autocomplete="tel" />
+      </div>
+      <div id="questionsContainer"></div>
+      <button type="submit" class="btn btn--secondary form__submit">Submit Questionnaire</button>
+    </form>
+    <div class="reserve__success" id="formSuccess" style="display:none;">
+      <p>Thank you for completing the questionnaire! We'll review your responses and be in touch soon.</p>
+    </div>
+  </div>
+</section>
+
+<script src="site-common.js"></script>
+<script>
+  fetch('Settings/Questionaire/content.txt')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(text => {
+      const data = { title: '', intro: '', categories: [] };
+      let cur = null;
+      for (const line of text.split('\n')) {
+        const t = line.trimStart();
+        if (t.startsWith('TITLE:')) data.title = t.substring(6).trim();
+        else if (t.startsWith('INTRO:')) data.intro = t.substring(6).trim();
+        else if (t.startsWith('CATEGORY:')) { cur = { title: t.substring(9).trim(), questions: [] }; data.categories.push(cur); }
+        else if (t.startsWith('Q:') && cur) cur.questions.push(t.substring(2).trim());
+      }
+      if (data.title) document.getElementById('heroTitle').textContent = data.title;
+      if (data.intro) document.getElementById('qIntro').textContent = data.intro;
+      const c = document.getElementById('questionsContainer'); c.innerHTML = ''; let n = 0;
+      data.categories.forEach((cat, ci) => {
+        const h = document.createElement('h3'); h.className = 'questionnaire__category';
+        h.textContent = (ci + 1) + '. ' + cat.title; c.appendChild(h);
+        cat.questions.forEach(q => {
+          n++;
+          const g = document.createElement('div'); g.className = 'form__group';
+          const lbl = document.createElement('label'); lbl.className = 'form__label'; lbl.setAttribute('for', 'q' + n); lbl.textContent = q;
+          const ta = document.createElement('textarea'); ta.className = 'form__input form__textarea';
+          ta.id = 'q' + n; ta.name = ci + '_' + cat.title + ' - Q' + n; ta.rows = 3; ta.required = true;
+          g.appendChild(lbl); g.appendChild(ta); c.appendChild(g);
+        });
+      });
+    })
+    .catch(() => {
+      document.getElementById('questionsContainer').innerHTML =
+        '<p class="terms__fallback">Unable to load questions. Please try again later.</p>';
+    })
+    .finally(() => pageReady());
+  handleFormSubmit('questionnaireForm', 'formSuccess');
+</script>
+
+</body>
+</html>

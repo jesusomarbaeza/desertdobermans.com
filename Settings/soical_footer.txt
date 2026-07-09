@@ -1,0 +1,36 @@
+============================================================
+  DESERT DOBERMANS — Social Links & Footer
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - Each setting starts with a label like:  INSTAGRAM:
+  - Just change the text after the label.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+  - For social links, replace "#" with your real URL.
+    Any link left as "#" will be automatically hidden.
+  - This file is shared across ALL pages — edit once, updates everywhere.
+
+============================================================
+
+
+# ---------- SOCIAL MEDIA LINKS ----------
+# Replace "#" with your actual profile URL to show the icon.
+# Leave as "#" to hide that icon.
+
+INSTAGRAM: https://www.instagram.com/desert.dobermans
+
+FACEBOOK: #
+
+TIKTOK: #
+
+X: #
+
+YOUTUBE: #
+
+AKC: https://marketplace.akc.org/breeder/desertdobermans
+
+
+# ---------- FOOTER ----------
+
+FOOTER: Copyright © 2025 Desert Dobermans LLC, Phoenix, AZ — All Rights Reserved.

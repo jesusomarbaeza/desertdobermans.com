@@ -1,0 +1,49 @@
+============================================================
+  DESERT DOBERMANS — Payment Terms
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - TITLE:    The page heading shown at the top.
+  - INTRO:    A paragraph shown below the title.
+  - SECTION:  Starts a new section with a gold-underlined heading.
+  - ITEM:     A bullet point within the current section.
+  - To add an item, add a new line:  ITEM: Your new item
+  - To remove an item, delete that ITEM: line.
+  - Just change the text after the label.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+
+============================================================
+
+TITLE: Reservation Deposit and Payment Terms
+
+INTRO: Please review the terms listed below. You must review and agree to the terms listed. By sending payment to us you agree to the terms listed below.
+
+SECTION: Reservation Details
+ITEM: The deposit is non-refundable but with a few exceptions.
+ITEM: The deposit is refundable only if we are unable to provide any puppy from the current litter, irrespective of gender or color.
+ITEM: The deposit payment is applied toward the final purchase amount.
+ITEM: In the event that the puppy needs to be rehomed by us, only the deposit is refundable, not the full payment only if the puppy is 11 weeks or younger.
+ITEM: Refunds when applicable only apply to dogs that aren't rehomed.
+
+SECTION: Rehoming within the Family
+ITEM: If you choose to rehome the puppy within your family, we must document and approve it to retain all the guarantees we offer.
+ITEM: A $500 processing fee applies for this service.
+
+SECTION: Reservation Flexibility
+ITEM: Reservations are transferable to another individual or can be used for the next litter without any processing fee.
+ITEM: Reservations are refundable if pregnancy isn't confirmed within 6 months of when the deposit was accepted. If the litter has arrived then the deposit is refundable only if we are unable to provide any puppy from the current litter.
+
+SECTION: Health Guarantee Coverage
+ITEM: We provide one-week health coverage, which gives our clients the time to make a veterinary appointment to ensure their puppy is in great health. Veterinary will provide documentation of the health condition that wouldn't allow the puppy to live longer than 4 years or a heart condition. We will provide a full refund if we can't provide a different puppy in good health. If the client can't accept a different puppy in good health the deposit isn't refundable.
+ITEM: We also provide a full health guarantee at an additional cost of $700 and covers your puppy for two (2) years from the date of purchase. This includes coverage for expected death due to health conditions not caused by negligence which includes parvo.
+
+SECTION: Doberman Adaptation Disclaimer
+ITEM: By adopting this puppy, you acknowledge and agree that we are no longer liable for any damages, injuries, or incidents caused by the dog.
+ITEM: As the new owner, you assume full responsibility for all aspects of the dog's care, including but not limited to health, training, behavior, and well-being.
+
+SECTION: Payment Instructions
+ITEM: By agreeing to the terms outlined above, you may proceed with your payment. We accept the following payment methods:
+ITEM: Zelle: Send your payment to contact@desertdobermans.com.
+ITEM: Credit/Debit Card: If you prefer to pay via card, please request a secure Chase payment link.
+ITEM: Once your payment has been submitted, kindly message us to confirm and provide a copy of your payment receipt for verification.

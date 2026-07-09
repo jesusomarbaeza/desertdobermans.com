@@ -1,0 +1,32 @@
+============================================================
+  DESERT DOBERMANS — Home Page Content
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - Each setting starts with a label like:  HERO TITLE:
+  - Just change the text after the label.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+  - To hide a button, leave its text blank.
+  - For social links, replace "#" with your real URL.
+    Any link left as "#" will be automatically hidden.
+
+============================================================
+
+
+# ---------- HERO SECTION ----------
+# This is the big banner area at the top of the page.
+
+HERO TITLE: Reserve Now for November 2026 Litter
+
+HERO BUTTON TEXT: Reserve
+
+
+# ---------- INFO SECTION ----------
+# This is the text area below the hero image.
+
+INFO HEADING: Puppies from Champion Bloodlines
+
+INFO TEXT: Our mission is dedicated to maintaining the esteemed tradition set forth by the American Kennel Club (AKC) of breeding purebred Doberman dogs of unparalleled quality. We take pride in our commitment to producing not only happy and healthy Dobermans but also ensuring that each one boasts their champion bloodlines, exemplifying excellence in both pedigree and temperament.
+
+INFO BUTTON TEXT: About Us

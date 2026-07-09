@@ -1,0 +1,45 @@
+============================================================
+  DESERT DOBERMANS — Breeder Services & Partners
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - Each category starts with a line like:  CATEGORY: Name Here
+  - Each question starts with:              Q: Your question here?
+  - Each answer starts with:                A: Your answer here.
+  - Answers can be multiple lines. Just keep typing.
+  - A new Q: line signals the end of the previous answer.
+  - To ADD a question, copy a Q:/A: pair and change the text.
+  - To REMOVE a question, delete both the Q: and A: lines.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+
+============================================================
+
+
+CATEGORY: Breeder Services
+
+Q: Stud Services
+
+A: We offer natural mating services with our premier, health-tested Doberman stud to approved, fully screened dams. Our stud fee is a flat $1,500. Please note that we do not ship fresh or frozen semen; all tie-ups take place locally via natural breeding. Alternatively, if you prefer artificial insemination, we are happy to accommodate the process at the dam owner's expense through a mutually agreed-upon local reproductive vet.
+
+Q: Co-Ownership
+
+A: We believe collaboration is key to preserving and advancing the Doberman Pinscher. Our co-ownership opportunities allow reputable breeders to integrate our top-tier show and breeding prospects into their programs under mutually beneficial, structured agreements. This partnership ensures our best genetic lines are nurtured in loving homes while actively contributing to the future of the breed through shared ethics, goals, and pick-of-the-litter rights.
+
+Q: Specialized Breeder Equipment
+
+A: Built by breeders, for breeders. We design and source premium, battle-tested whelping and reproductive equipment engineered specifically for large, deep-chested breeds. From heavy-duty, sanitary whelping boxes with integrated pig rails to curated, medical-grade whelping kits containing the exact tools we rely on during delivery, our equipment minimizes stress and maximizes puppy safety when it matters most.
+
+Q: Digital Products & Operational Tools
+
+A: Streamline the administrative side of your kennel with our specialized digital toolkits. We offer downloadable, customizable templates tailored to the unique needs of Doberman preservationists. Our inventory includes legally robust stud contracts, puppy sales agreements, co-ownership blueprints, and comprehensive digital tracking dashboards (compatible with Notion/Airtable) designed to monitor heat cycles, litter weight curves, and vital health data.
+
+Q: Consultation & Educational Services
+
+A: Shorten your learning curve and make critical decisions with confidence by leveraging our years of hands-on experience. We offer professional consultation services for fellow breeders, including comprehensive pedigree matching to optimize genetic diversity, structural evaluation of litters at 8 weeks to identify true show prospects, and mentorship on navigating complex breed-specific health management.
+
+CATEGORY: Our Partners
+
+Q: 
+
+A:

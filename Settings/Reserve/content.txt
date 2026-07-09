@@ -1,0 +1,47 @@
+============================================================
+  DESERT DOBERMANS — Reserve Page Content
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - Each setting starts with a label like:  HEADING:
+  - Just change the text after the label.
+  - Lines starting with # are comments (ignored).
+  - ITEMS are bullet points shown under the intro text.
+    Each ITEM: line becomes one item in the list.
+  - To add an item, add a new line:  ITEM: Your new item
+  - To remove an item, delete that ITEM: line.
+  - Do NOT change the labels themselves.
+
+============================================================
+
+
+HEADING: What's Included?
+
+SUBHEADING: Comprehensive Puppy Care Package
+
+INTRO: At Desert Dobermans, we are committed to providing the best start for your new family member. Here's what's included in our comprehensive package:
+
+ITEM: Health Documentation
+ITEM: Discounted DNA Testing
+ITEM: Ongoing Support
+ITEM: Puppy Care Package
+ITEM: Weekly Puppy Visits
+ITEM: Up-to-Date Vaccinations
+ITEM: Declaws Removal
+ITEM: Tail Docking
+ITEM: Free Arizona Delivery
+
+OUTRO: We prioritize the health, happiness, and well-being of our puppies. Contact us with any inquiries or to begin the journey of welcoming a new furry family member into your home.
+
+
+# ---------- PRICING & AVAILABILITY ----------
+
+PRICE TEXT: The cost for each puppy is $2500. A $400 non-refundable deposit is required, which is applied to the final price. Accepted payments are Cash, Zelle and Card.
+
+PRICE NOTE: *Note: Deposits are non-refundable to ensure commitment to the adoption process. Please review all terms and documentation provided carefully.
+
+DOB: October 2026
+
+TAKE HOME: November 2026
+
+SLOTS: 3 Reservation Slots Available for November 2026

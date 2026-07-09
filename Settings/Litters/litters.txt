@@ -1,0 +1,45 @@
+============================================================
+  DESERT DOBERMANS — Litters Page Settings
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - Each litter starts with:  LITTER: Display Name Here
+  - Below it, add:            FOLDER: FolderName
+    (this is the folder name inside Settings/Litters/)
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+
+  HOW TO ADD PUPPY PHOTOS:
+  - Drop image files (.png, .jpg, .jpeg, .webp, etc.) into the
+    matching folder inside Settings/Litters/.
+  - After adding/removing photos, update Settings/Litters/images.json
+    for that litter folder (add/remove the exact filename).
+  - Keep filenames exactly as they appear in the folder
+    (including uppercase/lowercase).
+  - To remove a puppy, just delete its image file.
+  - To add a new litter, create a new folder and add a
+    [LITTER: / FOLDER:] pair below, then add that folder to
+    Settings/Litters/images.json.
+
+============================================================
+
+LITTER: AUGUST 2021
+FOLDER: Litter1
+
+LITTER: JANUARY 2024
+FOLDER: Litter2
+
+LITTER: AUGUST 2024
+FOLDER: Litter3
+
+LITTER: APRIL 2025
+FOLDER: Litter4
+
+LITTER: OCTOBER 2025
+FOLDER: Litter5
+
+LITTER: APRIL 2026
+FOLDER: Litter6
+
+LITTER: NOVEMBER 2026
+FOLDER: Litter7

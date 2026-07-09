@@ -1,0 +1,70 @@
+============================================================
+  DESERT DOBERMANS — Adoption Questionnaire
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - TITLE:     The page heading shown in the hero banner.
+  - INTRO:     A paragraph shown above the questions.
+  - CATEGORY:  Starts a new numbered category heading.
+  - Q:         A question displayed under the current category.
+  - To ADD a question, add a new line:  Q: Your question here?
+  - To REMOVE a question, delete that Q: line.
+  - Just change the text after the label.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+
+============================================================
+
+TITLE: Puppy Adoption Questionnaire
+
+INTRO: This questionnaire is designed to help you prepare for the exciting journey of welcoming a Doberman puppy into your life. It also allows us to better understand your needs and provide any additional information or guidance to ensure a smooth and successful transition for both you and your new companion.
+
+CATEGORY: Breed Awareness & Research
+Q: What specific Doberman traits (positive or negative) influenced your decision to choose this breed?
+Q: How does the Doberman's reputation as a "Velcro dog" fit into your personal lifestyle?
+Q: What are three things you've learned about Dobermans that surprised you during your research?
+
+CATEGORY: Experience & Philosophy
+Q: Can you describe your history with working breeds or high-energy dogs?
+Q: How has your past dog ownership shaped your current approach to training and discipline?
+Q: What is your philosophy on correcting unwanted behaviors in a powerful, sensitive breed?
+
+CATEGORY: Physical & Mental Stimulation
+Q: Dobermans need "jobs." What daily mental tasks will you provide to prevent boredom and destruction?
+Q: How many hours of focused physical exercise can you realistically provide every single day?
+Q: How do you plan to handle the high energy levels of a Doberman during its first two years?
+
+CATEGORY: Living Environment
+Q: Is your yard fully fenced? Please describe the height and material of your perimeter.
+Q: Will the dog live primarily indoors with the family or in an outdoor kennel?
+Q: Are there any major life changes (moving, new job, baby) expected in the next three years?
+
+CATEGORY: Training & Socialization
+Q: Which professional trainers or facilities in your area have you already researched for puppy classes?
+Q: How will you socialize your puppy to ensure they are neutral and confident around strangers?
+Q: Are you prepared to handle "rebellion" stages during the Doberman's adolescence?
+
+CATEGORY: Health & Wellness
+Q: Are you familiar with DCM and vWD? How will you monitor for breed-specific health issues?
+Q: Do you commit to keeping this dog on a regular preventative care schedule with a vet?
+Q: What is your plan for grooming tasks like weekly nail dremeling and ear cleaning?
+
+CATEGORY: Financial Commitment
+Q: Are you prepared for the high cost of quality large-breed nutrition and supplements?
+Q: Have you researched pet insurance or set aside an emergency fund for unexpected surgeries?
+Q: Are you aware of the costs for professional training, which is often essential for this breed?
+
+CATEGORY: Household Dynamics
+Q: Please list the ages of everyone in your home and their previous experience with large dogs.
+Q: How many hours per day will the puppy be left alone, and where will they stay while you are out?
+Q: How will you ensure the safety of other pets or small children in the home with a large puppy?
+
+CATEGORY: Long-term Expectations
+Q: What is your plan for the dog if you can no longer care for it due to an emergency?
+Q: Do you have any intention of breeding this dog, or do you agree to a spay/neuter contract?
+Q: What role does this dog play in your life: protector, athlete, or strictly a companion?
+
+CATEGORY: Potential Challenges
+Q: How will you manage a 90lb dog that may develop protective instincts or "same-sex aggression"?
+Q: Are you prepared for the time commitment of a dog that requires constant human interaction?
+Q: What is your biggest concern or fear regarding owning a Doberman?

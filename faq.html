@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ</title>
+  <link rel="icon" href="Settings/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="hero hero--short" id="top">
+  <img class="hero__img" src="Settings/Cover.jpg" alt="Cover" />
+  <div class="hero__content">
+    <h1 class="hero__title">Frequently Asked Questions</h1>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq__inner" id="faqContent"></div>
+</section>
+
+<script src="site-common.js"></script>
+<script>
+  function parseFaq(text) {
+    const categories = [];
+    let cur = null, q = null, collecting = false;
+    for (const line of text.split('\n')) {
+      const t = line.trimStart();
+      if (t.startsWith('CATEGORY:')) {
+        if (q && cur) cur.items.push(q);
+        q = null; collecting = false;
+        cur = { title: t.substring(9).trim(), items: [] };
+        categories.push(cur);
+      } else if (t.startsWith('Q:')) {
+        if (q && cur) cur.items.push(q);
+        q = { q: t.substring(2).trim(), a: '' }; collecting = false;
+      } else if (t.startsWith('A:')) {
+        if (q) { q.a = t.substring(2).trim(); collecting = true; }
+      } else if (collecting && q && (line.trim() || q.a.length)) {
+        q.a += '\n' + line;
+      }
+    }
+    if (q && cur) cur.items.push(q);
+    return categories;
+  }
+
+  function renderFaq(cats) {
+    const c = document.getElementById('faqContent');
+    const frag = document.createDocumentFragment();
+    for (const cat of cats) {
+      const sec = document.createElement('div'); sec.className = 'faq__category';
+      const h = document.createElement('h2'); h.className = 'faq__category-title'; h.textContent = cat.title;
+      sec.appendChild(h);
+      for (const item of cat.items) {
+        const det = document.createElement('details'); det.className = 'faq__item';
+        const sum = document.createElement('summary'); sum.className = 'faq__question'; sum.textContent = item.q;
+        det.appendChild(sum);
+        const ans = document.createElement('div'); ans.className = 'faq__answer';
+        const paragraphs = item.a.replace(/^\n+|\n+$/g, '').split(/\n{2,}/);
+        for (const p of paragraphs) {
+          const lines = p.split('\n');
+          const listLines = lines.filter(l => l.trim().startsWith('-') || /^\d+\.\s/.test(l.trim()));
+          if (listLines.length > 1) {
+            let intro = '';
+            const ul = document.createElement('ul');
+            for (const l of lines) {
+              const lt = l.trim();
+              if (lt.startsWith('-')) { const li = document.createElement('li'); li.textContent = lt.substring(1).trim(); ul.appendChild(li); }
+              else if (/^\d+\.\s/.test(lt)) { const li = document.createElement('li'); li.textContent = lt.replace(/^\d+\.\s*/, ''); ul.appendChild(li); }
+              else if (lt) intro = lt;
+            }
+            if (intro) { const pe = document.createElement('p'); pe.textContent = intro; ans.appendChild(pe); }
+            ans.appendChild(ul);
+          } else {
+            const pe = document.createElement('p'); pe.textContent = p.replace(/\n/g, ' ').trim();
+            if (pe.textContent) ans.appendChild(pe);
+          }
+        }
+        det.appendChild(ans); sec.appendChild(det);
+      }
+      frag.appendChild(sec);
+    }
+    c.textContent = '';
+    c.appendChild(frag);
+  }
+
+  fetch('Settings/FAQ/content.txt')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(t => renderFaq(parseFaq(t)))
+    .catch(() => {
+      document.getElementById('faqContent').innerHTML =
+        '<p class="faq__fallback">To view the FAQ, please open this page through a local web server ' +
+        '(e.g. run <strong>python3 -m http.server</strong> in this folder and visit ' +
+        '<strong>localhost:8000/faq.html</strong>).</p>';
+    })
+    .finally(() => pageReady());
+</script>
+
+</body>
+</html>

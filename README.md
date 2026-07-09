@@ -1,2 +1,1 @@
-# desertdobermans.com
-Website for desertdobermans.com
+# desertdoberman.github.io

@@ -1,0 +1,66 @@
+============================================================
+  DESERT DOBERMANS — Health & Certifications
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - Each dog starts with:       SECTION: Dog Name Here
+  - Each card needs three lines:
+        ORG:   Organization name (Embark, OFA, AKC, BBB).
+          Must match an image in Settings/About/Icons/.
+      LABEL: Button text (e.g. DNA RESULTS, CERTIFICATIONS).
+      LINK:  URL or local file path.
+  - URLs open in a new tab.
+    - File paths (e.g. Settings/About/Certs/…) open the PDF.
+  - To add a new card, copy an existing ORG/LABEL/LINK block.
+  - To add a new dog, add a new SECTION: line above the cards.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+
+============================================================
+
+
+# ---------- SIRE ----------
+
+SECTION: Sire: KING CHU CHO BLU BAEZA
+
+ORG: Embark
+LABEL: DNA RESULTS
+LINK: http://embk.me/i/kingchuchoblubaeza
+
+ORG: OFA
+LABEL: CERTIFICATIONS
+LINK: https://ofa.org/advanced-search/?appnum=2360543
+
+ORG: AKC
+LABEL: PEDIGREE
+LINK: Settings/About/Certs/AKC-Pedigree- King Chu Cho Blu Ba.pdf
+
+
+# ---------- DAM ----------
+
+SECTION: Dam: Yves
+
+ORG: Embark
+LABEL: DNA RESULTS
+LINK: http://embk.me/i/yves6
+
+ORG: OFA
+LABEL: CERTIFICATIONS
+LINK: https://ofa.org/advanced-search/?appnum=2512887
+
+ORG: AKC
+LABEL: PEDIGREE
+LINK: Settings/About/Certs/AKC-Pedigree- Yves.pdf
+
+
+# ---------- BREEDER ----------
+
+SECTION: Breeder Certifications
+
+ORG: AKC
+LABEL: CERTIFICATION
+LINK: Settings/About/Certs/Cert1.pdf
+
+ORG: AKC
+LABEL: CERTIFICATION
+LINK: Settings/About/Certs/Cert2.pdf

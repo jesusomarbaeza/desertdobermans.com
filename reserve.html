@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve</title>
+  <link rel="icon" href="Settings/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@300;400;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section class="hero hero--short" id="top">
+  <img class="hero__img" src="Settings/Cover.jpg" alt="Cover" />
+  <div class="hero__content">
+    <h1 class="hero__title">Reserve a Puppy</h1>
+  </div>
+</section>
+
+<section class="included" id="included">
+  <div class="included__inner">
+    <h2 class="included__heading" id="includedHeading">What's Included?</h2>
+    <h3 class="included__subheading" id="includedSubheading">Comprehensive Puppy Care Package</h3>
+    <p class="included__text" id="includedIntro">At Desert Dobermans, we are committed to providing the best start for your new family member. Here's what's included in our comprehensive package:</p>
+    <ul class="included__list" id="includedList">
+      <li>Health Documentation</li>
+      <li>Discounted DNA Testing</li>
+      <li>Ongoing Support</li>
+      <li>Puppy Care Package</li>
+      <li>Weekly Puppy Visits</li>
+      <li>Up-to-Date Vaccinations</li>
+      <li>Declaws Removal</li>
+      <li>Tail Docking</li>
+    </ul>
+    <p class="included__text" id="includedOutro">We prioritize the health, happiness, and well-being of our puppies. Contact us with any inquiries or to begin the journey of welcoming a new furry family member into your home.</p>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="pricing__inner">
+    <p class="pricing__text" id="priceText">The cost for each puppy is $2500. A $400 non-refundable deposit is required, which is applied to the final price.</p>
+    <p class="pricing__note" id="priceNote">*Note: Deposits are non-refundable to ensure commitment to the adoption process. Please review all terms and documentation provided carefully.</p>
+    <div class="pricing__details">
+      <p class="pricing__detail"><strong>DOB:</strong> <span id="priceDob">October 2026</span></p>
+      <p class="pricing__detail"><strong>Take-home date:</strong> <span id="priceTakeHome">November 2026</span></p>
+    </div>
+    <p class="pricing__slots" id="priceSlots">3 Reservation Slots Available for November 2026</p>
+  </div>
+</section>
+
+<section class="reserve" id="reserve">
+  <div class="reserve__inner">
+    <h2 class="reserve__heading">Desert Dobermans Puppy Application</h2>
+    <form class="reserve__form" id="reserveForm" action="https://formsubmit.co/29912006390f7348e9a309cdcae624c4"" method="POST">
+      <input type="hidden" name="_subject" value="New Puppy Application — Desert Dobermans" />
+      <input type="hidden" name="_captcha" value="true" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" style="display:none" />
+      <div class="form__group">
+        <label class="form__label" for="fullName">First &amp; Last Name *</label>
+        <input class="form__input" type="text" id="fullName" name="name" required autocomplete="name" />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="email">Email *</label>
+        <input class="form__input" type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="phone">Phone *</label>
+        <input class="form__input" type="tel" id="phone" name="phone" required autocomplete="tel" />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="address">Address *</label>
+        <input class="form__input" type="text" id="address" name="address" required autocomplete="street-address" />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="cityStateZip">City / State / Zip *</label>
+        <input class="form__input" type="text" id="cityStateZip" name="city_state_zip" required />
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="gender">Puppy Gender Preference</label>
+        <select class="form__input form__select" id="gender" name="gender">
+          <option value="" disabled selected>Select…</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="color">Puppy Color Preference</label>
+        <select class="form__input form__select" id="color" name="color">
+          <option value="" disabled selected>Select…</option>
+          <option value="Black">Black</option>
+          <option value="Blue">Blue</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--secondary form__submit">Submit</button>
+    </form>
+    <div class="reserve__success" id="formSuccess" style="display:none;">
+      <p>Thank you for your application! We'll be in touch soon.</p>
+    </div>
+  </div>
+</section>
+
+<script src="site-common.js"></script>
+<script>
+  fetchSettings('Settings/Reserve/content.txt', ['ITEM']).then(d => {
+    const el = id => document.getElementById(id);
+    if (d['HEADING'])    el('includedHeading').textContent = d['HEADING'];
+    if (d['SUBHEADING']) el('includedSubheading').textContent = d['SUBHEADING'];
+    if (d['INTRO'])      el('includedIntro').textContent = d['INTRO'];
+    if (d['OUTRO'])      el('includedOutro').textContent = d['OUTRO'];
+    if (d['ITEM'] && d['ITEM'].length) {
+      const list = el('includedList'); list.innerHTML = '';
+      d['ITEM'].forEach(item => { const li = document.createElement('li'); li.textContent = item; list.appendChild(li); });
+    }
+    if (d['PRICE TEXT'])  el('priceText').textContent = d['PRICE TEXT'];
+    if (d['PRICE NOTE'])  el('priceNote').textContent = d['PRICE NOTE'];
+    if (d['DOB'])         el('priceDob').textContent = d['DOB'];
+    if (d['TAKE HOME'])   el('priceTakeHome').textContent = d['TAKE HOME'];
+    if (d['SLOTS'])       el('priceSlots').textContent = d['SLOTS'];
+  }).catch(() => {}).finally(() => pageReady());
+  handleFormSubmit('reserveForm', 'formSuccess');
+</script>
+
+</body>
+</html>

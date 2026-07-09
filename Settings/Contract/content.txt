@@ -1,0 +1,49 @@
+============================================================
+  DESERT DOBERMANS — Puppy Purchase Agreement
+============================================================
+
+  HOW TO EDIT THIS FILE:
+  - TITLE:    The page heading shown at the top.
+  - INTRO:    A paragraph shown below the title.
+  - SECTION:  Starts a new section with a gold-underlined heading.
+  - ITEM:     A numbered clause within the current section.
+  - OUTRO:    A closing paragraph shown before the form.
+  - The form at the bottom collects Name, Phone, Email
+    and submits an acknowledgment.
+  - Just change the text after the label.
+  - Lines starting with # are comments (ignored).
+  - Do NOT change the labels themselves (the part before the colon).
+
+============================================================
+
+TITLE: Puppy Purchase Agreement
+
+INTRO: This Agreement is made between Desert Dobermans LLC (“Seller” or “Breeder”) and the undersigned Buyer (“Buyer”). Both parties agree to the following terms and conditions regarding the purchase of a Doberman Pinscher puppy.
+
+SECTION: Seller Agreements
+ITEM: The Seller warrants that the puppy is a purebred Doberman Pinscher, exhibiting typical temperament, structure, and health consistent with breed standards.
+ITEM: The puppy is or will be registered with the American Kennel Club (AKC). Registration papers will be forwarded to the Buyer upon receipt from the AKC.
+ITEM: The puppy is healthy at the time of sale, has received appropriate immunizations, and has a documented health record provided to the Buyer.
+ITEM: The Seller acknowledges the possibility of worms or parasites in puppies and recommends that the Buyer conduct a fecal exam with a licensed veterinarian within the first week of ownership.
+ITEM: Refunds are only applicable if: The puppy is diagnosed with Von Willebrand Disorder (VWD) or Dilated Cardiomyopathy (DCM) within the first 7 days of ownership. *Without the extended health guarantee. A licensed veterinarian confirms that the condition will significantly impact the puppy’s lifespan, with a prognosis that it will not live past five years of age. The Buyer provides a veterinary certificate confirming the diagnosis.
+ITEM: Refunds are not granted for conditions such as parvovirus, rabies, worms/parasites, or other common health issues.
+ITEM: Veterinary expenses incurred by the Buyer are not reimbursable. Medication costs may be reimbursed for worms, parasites, or infections that are treatable within one month, at the Seller’s discretion.
+ITEM: If the Buyer is unable to care for the puppy, it must be returned to the Seller. No refunds or compensation will be provided in this case.
+ITEM: If the Seller determines the puppy is not being properly cared for or has been mentally or physically mistreated, the Seller reserves the right to repossess the puppy and its AKC registration without compensation. This decision is at the sole discretion of the Seller.
+
+SECTION: Health Guarantee and Waiver
+ITEM: The Seller provides a limited health guarantee covering the puppy for 7 days from the date of delivery. This guarantee covers health issues identified by a licensed veterinarian during the first week of ownership. Refunds are limited to cases of VWD or DCM, as specified in Clause 5. The Buyer assumes responsibility for the costs of routine veterinary care, treatments, or unexpected health issues, except as noted under this guarantee.
+ITEM: A supplemental health guarantee extends to two years from the date of purchase, limited to covering expected death due to breed-specific genetic conditions such as VWD or DCM. This guarantee does not cover routine health risks or accidents. This guarantee is available for purchase at $1,000. If a claim is submitted, it will be reviewed by a qualified veterinarian. Should the veterinarian determine that the puppy will not live beyond five years due to a health condition, a full refund of both the puppy’s purchase price and the extended guarantee cost will be issued. Please note that veterinary medical treatments or expenses are not covered under this guarantee.
+ITEM: The Buyer acknowledges the unique health risks associated with Dobermans, including but not limited to VWD and DCM, and agrees to educate themselves on the specific needs of blue Dobermans.
+ITEM: The Seller is not liable for injuries, illnesses, or damages caused by the puppy after the sale is completed. The Buyer assumes all responsibility for the puppy’s behavior, health, and any resulting consequences.
+
+SECTION: Buyer Agreements
+ITEM: The Buyer agrees to schedule a veterinary exam, including a fecal test, within the first week of ownership.
+ITEM: The Buyer is responsible for maintaining the puppy’s health with regular veterinary care, vaccinations, and preventative treatments as recommended by their veterinarian.
+ITEM: The Buyer agrees not to pursue legal action against the Seller for any reason and to pay any court or attorney fees incurred by the Seller should legal action be initiated.
+ITEM: The Buyer acknowledges that refunds are limited to the conditions specified in this Agreement and understands that no additional guarantees or warranties, expressed or implied, are made by the Seller.
+ITEM: The Buyer accepts responsibility for proper training, nutrition, and care to support the puppy’s well-being and development.
+ITEM: The Buyer indemnifies and holds the Seller harmless from any claims, liabilities, or expenses arising from the puppy’s actions, health, or behavior post-sale.
+ITEM: If the Buyer is unable to continue caring for the puppy at any time, the puppy must be returned to the Seller. No refunds will be provided for the purchase price of the puppy or for any associated costs, including but not limited to veterinary expenses, transportation, or other related expenditures.
+
+OUTRO: By signing below, both parties affirm their understanding and acceptance of the terms outlined in this Agreement. This document constitutes the entire agreement between the parties, and no additional representations or guarantees apply unless explicitly stated herein.
